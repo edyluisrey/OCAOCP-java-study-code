@@ -8,7 +8,6 @@ public class AccessConstructorChildTest {
 	  System.out.println("Counter:"+ obj.getCounter()); //1
 	  AccessConstructorChild obj1 = new AccessConstructorChild();
 	  System.out.println("Counter:"+ obj1.getCounter());//2
-	  
 	  //static method
 	  AccessConstructor accessConstructor = new AccessConstructor();
 	  AccessConstructorChild accessConstructorChild = new AccessConstructorChild();
