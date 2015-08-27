@@ -1,4 +1,4 @@
-package oca.accessControl;
+package oca.accessControl.abstracts;
 
 public class SubClassCar extends AbstractCar {
 

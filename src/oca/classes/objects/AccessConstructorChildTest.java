@@ -1,5 +1,7 @@
 package oca.classes.objects;
 
+import oca.keyword.superr.Parentclass;
+
 public class AccessConstructorChildTest {
 	
   public static void main(String args[]){
@@ -15,6 +17,13 @@ public class AccessConstructorChildTest {
 	  accessConstructor.StaticMethod();//AccessConstructor method -- same AccessConstructor.StaticMethod();
 	  accessConstructorChild.StaticMethod();// AccessConstructorChild method
 	  accessConstructorChild2.StaticMethod();// AccessConstructor  method, becuase is on compile time  
+	  
+	  //test defaul method
+	  accessConstructorChild.testDefault(); // same package
+	  accessConstructorChild.testProtected(); // when is in other package need use inheritance
+	  
+	  Parentclass parentclass = new Parentclass();
+	  parentclass.testPublicMethod();
   }
   
 }

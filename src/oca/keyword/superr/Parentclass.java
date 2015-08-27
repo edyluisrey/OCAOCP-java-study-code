@@ -3,7 +3,7 @@ package oca.keyword.superr;
 public class Parentclass {
 	int number = 200;
 	
-	Parentclass(){
+	public Parentclass(){
 	      System.out.println("Constructor of Superclass");
     }
 	
@@ -13,5 +13,13 @@ public class Parentclass {
 	
 	void display(){
 		  System.out.println("Parent class method Display");
+	}
+	
+	protected void testProtectedMethod(){
+		
+	}
+	
+	public void testPublicMethod(){
+		
 	}
 }

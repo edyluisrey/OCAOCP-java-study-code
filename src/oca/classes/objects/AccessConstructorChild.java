@@ -20,4 +20,12 @@ public class AccessConstructorChild extends AccessConstructor {
 	public static void StaticMethod(){
         System.out.println("static method AccessConstructorChild");
     }
+	
+	void testDefault(){
+		System.out.println("defaul modifier");
+	}
+	
+	protected void testProtected(){
+		System.out.println("protected method");
+	}
 }
