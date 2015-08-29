@@ -10,7 +10,7 @@ abstract class Electronic {
 
 public class Tablet extends Electronic implements Gadget {
    
-	void doStuff() { // change to public
+	public void doStuff() { // change to public
 		System.out.print("show book "); 
 	}
 
