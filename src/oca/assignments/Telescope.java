@@ -1,4 +1,4 @@
-package oca.oo.assignments;
+package oca.assignments;
 
 public class Telescope {
 	static int magnify = 2;

@@ -1,4 +1,4 @@
-package oca.oo.assignments;
+package oca.assignments;
 
 public class Ouch {
 	static int ouch = 7;

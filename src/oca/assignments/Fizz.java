@@ -1,4 +1,4 @@
-package oca.oo.assignments;
+package oca.assignments;
 
 class Fizz {
 	int x = 5;

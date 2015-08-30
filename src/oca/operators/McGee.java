@@ -1,4 +1,4 @@
-package oca.oo.operators;
+package oca.operators;
 
 public class McGee {
 	public static void main(String[] args) {

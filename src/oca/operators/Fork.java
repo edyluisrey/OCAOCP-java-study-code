@@ -1,4 +1,4 @@
-package oca.oo.operators;
+package oca.operators;
 
 class Fork {
 	public static void main(String[] args) {
