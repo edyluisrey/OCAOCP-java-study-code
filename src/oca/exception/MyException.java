@@ -16,5 +16,5 @@ class MyException extends Exception {
 			throw me;
 		}
 	}
-	
+		
 }

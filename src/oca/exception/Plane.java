@@ -5,6 +5,7 @@ class Plane {
 	public static void main(String[] args) {
 		new Plane().s1();
 		System.out.println(s);
+		
 	}
 	
     void s1() {
@@ -28,4 +29,5 @@ class Plane {
     void s3() throws Exception {
     	throw new Exception();
     }
+    
 }
