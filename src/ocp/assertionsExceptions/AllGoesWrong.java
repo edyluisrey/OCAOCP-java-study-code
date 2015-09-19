@@ -19,4 +19,4 @@ public class AllGoesWrong {
 	void blowUp() throws IOException, SQLException {	
 		throw new SQLException();
 	}
-}
+} 
