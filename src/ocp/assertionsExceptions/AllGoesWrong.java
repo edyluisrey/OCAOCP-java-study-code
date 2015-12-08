@@ -24,7 +24,8 @@ public class AllGoesWrong {
 	}
 	
 	private void methodA(int num) {
-		assert (num>=0):"num es menor";
+		assert (num>=0):"num es menor"; //Don’t Use Assertions to Validate Arguments to a public Method,
+		                                //but it case is private method
 		// throws an AssertionError
 		// if this test isn't true
 		System.out.println("num:"+num);
