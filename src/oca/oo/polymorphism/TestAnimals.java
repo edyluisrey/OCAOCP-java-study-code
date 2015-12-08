@@ -24,7 +24,6 @@ public class TestAnimals {
 		a.eat(); // Runs the Animal version of eat()
 		b.eat(); // Runs the Horse version of eat()
 		//b.buck();  undefined for Animal
-		
 		Animal c = new cow();
 		c.eat();
 				
