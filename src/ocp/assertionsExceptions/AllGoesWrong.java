@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class AllGoesWrong {
 	public static void main(String[] args) {
 		AllGoesWrong a = new AllGoesWrong();
-		int num= -2;
+		int num= 2;
 		a.methodA(num);
 		
 		try {
