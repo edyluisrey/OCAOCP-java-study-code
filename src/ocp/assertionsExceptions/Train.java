@@ -10,8 +10,7 @@ class Train {
         try {
         	a.drive();
         	System.out.println("honk! honk!");
-        }  catch(AnotherTrainComing | RanOutOfTrack e) { 
-           // could be catch(Exception e) {,  catch(RanOutOfTrack e) {
+        }  catch(AnotherTrainComing | RanOutOfTrack e) { // could be catch(Exception e) {,  catch(RanOutOfTrack e) {
         	System.out.println("error driving");
         	throw e; 
       }
