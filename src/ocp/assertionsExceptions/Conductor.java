@@ -10,7 +10,7 @@ class Conductor {
 	
 	public static void main(String[] args) {
 		new Conductor().run();
-		System.out.println(s);
+		System.out.println(s); // print  -t1c23
 	}
 	
 	public void run() {
