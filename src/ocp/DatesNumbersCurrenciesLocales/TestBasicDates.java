@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class TestBasicDates {
      public static void main(String[] args) {
-    	 Date d1 = new Date(1_000_000_000_000L); // a trillion, Java 7 style
+    	 Date d1 = new Date(1_000_000_000_000L);
     	 System.out.println("1st date " + d1.toString());
     	 
     	 Calendar c = Calendar.getInstance();
@@ -23,5 +23,8 @@ public class TestBasicDates {
     	 Locale locIT = new Locale("it", "IT");
     	 DateFormat dfITaly = DateFormat.getDateInstance(DateFormat.FULL, locIT);
     	 System.out.println("Italy: " + dfITaly.format(d3));
+    	 System.out.println("Italy:  " + locIT.getDisplayCountry());
+    	 System.out.println("Italy lan: " + locIT.getDisplayLanguage());
+   
 	 }
 }
