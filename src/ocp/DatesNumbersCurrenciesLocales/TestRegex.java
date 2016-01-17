@@ -19,5 +19,22 @@ public class TestRegex {
     	 while(m1.find()) {
     		 System.out.print(m1.start() + " ");
     	 }
+    	 System.out.print("\n");
+    	     	 
+    	 Pattern p3 = Pattern.compile("\\d+");
+    	 Matcher m3 = p3.matcher("1 a12 234b");
+    	 while(m3.find()) {
+    		 System.out.println(m3.start() + " group:" + m3.group());
+    	 }
+    	 System.out.print("\n");
+    	 
+    	 //+ one or more occurrences
+    	 //* Zero or more occurrences
+    	 //? Zero or one occurrence
+    	 Pattern p4 = Pattern.compile(".*xx");
+    	 Matcher m4 = p4.matcher("yyxxxyxx");
+    	 while(m4.find()) {
+    		 System.out.println(m4.start() + " group:" + m4.group());
+    	 }
 	}
 }
