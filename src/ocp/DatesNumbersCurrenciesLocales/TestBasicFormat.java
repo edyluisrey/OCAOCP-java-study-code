@@ -18,13 +18,14 @@ public class TestBasicFormat {
 		for(NumberFormat numberfor : nf)  
 			System.out.println(numberfor.format(f1));
     	
-		NumberFormat numberFormat = NumberFormat.getInstance(Locale.ITALY);
+		NumberFormat numberFormat = NumberFormat.getInstance(Locale.US);		
 		numberFormat.setParseIntegerOnly(true);
 
 		String usersNumber = "1976.0826" ;
 		try{
 		    Number num = numberFormat.parse(usersNumber) ;
 		    System.out.println(num);  // it doesn't work fine , because print 19760826
+		    //It depend Set locale. If you're in a locale where . can be used as a thousands separator it does'n work
 		}
 		catch(ParseException pe){
 		    System.out.println(pe);
