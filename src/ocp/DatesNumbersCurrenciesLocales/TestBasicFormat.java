@@ -30,5 +30,14 @@ public class TestBasicFormat {
 		catch(ParseException pe){
 		    System.out.println(pe);
 		}
+		
+		System.out.printf("%2$d + %1$d \n", 123, 456);
+		//%[arg_index$][flags][width][.precision]conversion char
+		int a = -100;
+		int b = 102394;
+		System.out.printf("%1$(7d \n", a);
+		System.out.printf("%0,7d  \n", b);
+		System.out.format("%+-7d \n", b);
+		System.out.printf("%2$b + %1$5d \n", a, false);
     }
 }
