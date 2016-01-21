@@ -36,5 +36,11 @@ public class TestRegex {
     	 while(m4.find()) {
     		 System.out.println(m4.start() + " group:" + m4.group());
     	 }
+    	 
+    	 Pattern p5 = Pattern.compile("\\d*");
+    	 Matcher m5 = p5.matcher("ab14ef");
+    	 while(m5.find()) {
+    	     System.out.print(m5.start() +" group: "+ m5.group()+ " \n");
+    	 }
 	}
 }
