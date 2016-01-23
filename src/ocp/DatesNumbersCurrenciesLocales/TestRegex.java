@@ -42,5 +42,13 @@ public class TestRegex {
     	 while(m5.find()) {
     	     System.out.print(m5.start() +" group: "+ m5.group()+ " \n");
     	 }
+    	 
+    	 //boundary metacharacters
+    	 Pattern p6 = Pattern.compile("\\B");
+    	 Matcher m6 = p6.matcher("^23 *$76 bc");
+    	 System.out.print("match positions: ");
+    	 while(m6.find()) {
+    	   System.out.print(m6.start() + " ");
+    	 }
 	}
 }
