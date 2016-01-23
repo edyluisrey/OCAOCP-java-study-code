@@ -50,5 +50,15 @@ public class TestRegex {
     	 while(m6.find()) {
     	   System.out.print(m6.start() + " ");
     	 }
+    	 System.out.print("\n");
+    	 
+    	 //split
+    	 String in = "1 ";
+    	 String[] ch = in.split("\\d");
+    	 System.out.println("count " + ch.length);  //2
+    	 for(String s : ch){
+    		 System.out.println("s:"+s);
+    	 }
+    	 
 	}
 }
