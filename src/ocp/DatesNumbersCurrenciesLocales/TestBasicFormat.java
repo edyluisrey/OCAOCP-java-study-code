@@ -39,5 +39,14 @@ public class TestBasicFormat {
 		System.out.printf("%0,7d  \n", b);
 		System.out.format("%+-7d \n", b);
 		System.out.printf("%2$b + %1$5d \n", a, false);
+		
+		String s = "90.12345";
+		double d = 90.12345d;
+		NumberFormat nf1 = NumberFormat.getInstance(Locale.US);
+		nf1.setMaximumFractionDigits(4);
+		System.out.println(nf1.format(d) + " ");
+		try {
+		  System.out.println(nf1.parse(s));
+		}catch (Exception e) {  }
     }
 }
