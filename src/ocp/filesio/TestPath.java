@@ -35,6 +35,10 @@ public class TestPath {
 		//normalize
 		System.out.println(Paths.get("/a/b/c/..").normalize());
 		System.out.println(Paths.get(".classpath").normalize());
+		
+		
+		path1.resolve ((String) null);  //compile 
+
 		 
 	}  
 }
