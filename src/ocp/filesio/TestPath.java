@@ -13,14 +13,28 @@ public class TestPath {
 		 Path  path1 = Paths.get("source");
 		 Path   file = Paths.get("source/file2.txt");
 		 try {
-			Files.createFile(path); //You call static methods on Files rather than instance methods on File.
+			if(!Files.exists(path)) 
+				Files.createFile(path); //You call static methods on Files rather than instance methods on File.
 			System.out.println(Files.exists(path));
-			Files.createDirectory(path1);
-			Files.createFile(file);
+			if(!Files.exists(path1))
+				Files.createDirectory(path1);
+			if(!Files.exists(file))
+			    Files.createFile(file);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		 
+		//info about path
+		System.out.println("getFileName: "  + path.getFileName());
+		System.out.println("getName(0): " +  file.getName(0));
+		System.out.println("getNameCount: "  + file.getNameCount());
+		System.out.println("getParent: " +  file.getParent());
+		System.out.println("getRoot: " +  file.getRoot());
+		
+		//normalize
+		System.out.println(Paths.get("/a/b/c/..").normalize());
+		System.out.println(Paths.get(".classpath").normalize());
 		 
 	}  
 }
