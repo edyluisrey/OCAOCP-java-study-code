@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class TestPath {
       
@@ -35,10 +36,22 @@ public class TestPath {
 		//normalize
 		System.out.println(Paths.get("/a/b/c/..").normalize());
 		System.out.println(Paths.get(".classpath").normalize());
+				
+		//path1.resolve ((String) null);  //compile 
 		
-		
-		path1.resolve ((String) null);  //compile 
+		//BasicFileAttributes		
+		try {
+			BasicFileAttributes basic = Files.readAttributes(file, BasicFileAttributes.class);
+			System.out.println("create: " + basic.creationTime());
+	        System.out.println("access: " + basic.lastAccessTime());
+	        System.out.println("modify: " + basic.lastModifiedTime());
+	        System.out.println("directory: " + basic.isDirectory());
 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
 		 
 	}  
 }
