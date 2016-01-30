@@ -1,6 +1,7 @@
 package ocp.filesio;
 
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -47,6 +48,16 @@ public class TestPath {
 	        System.out.println("modify: " + basic.lastModifiedTime());
 	        System.out.println("directory: " + basic.isDirectory());
 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//DirectoryStream
+		Path dir = Paths.get("source");
+		try (DirectoryStream<Path> stream =Files.newDirectoryStream(dir)){
+		    for (Path pathS : stream)
+		       System.out.println(pathS.getFileName());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
