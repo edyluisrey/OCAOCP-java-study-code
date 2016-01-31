@@ -2,8 +2,10 @@ package ocp.filesio;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.PathMatcher;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 
@@ -62,6 +64,10 @@ public class TestPath {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//PathMatcher
+		PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.txt");
+	    System.out.println(matcher.matches(path)); //true
         
 		 
 	}  
