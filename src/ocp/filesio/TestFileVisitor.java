@@ -17,7 +17,10 @@ public class TestFileVisitor  extends SimpleFileVisitor<Path>{
      
 	 public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
 		    System.out.println("file visit: " + file);
-		    return FileVisitResult.CONTINUE; 
+            if ( file.getFileName().endsWith("file4.txt")) {
+            	return FileVisitResult.TERMINATE;
+            }
+            return FileVisitResult.CONTINUE; 
 	 }
      
 	 public FileVisitResult postVisitDirectory(Path dir, IOException exc) {
