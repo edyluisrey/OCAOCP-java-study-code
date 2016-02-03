@@ -69,6 +69,13 @@ public class TestPath {
 		PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.txt");
 	    System.out.println(matcher.matches(path)); //true
         
-		 
+	    Path one = Paths.get("c:/x"); 
+	    Path two = Paths.get("c:/x/y/a"); 
+	    System.out.println(one.relativize(two));  // y/a 
+	    System.out.println(two.relativize(one));  // ../..
+	    System.out.println(one.resolve(two));     //c:/x/c:/x/y/a
+	    System.out.println(two.resolve(one));     //c:/x/y/a/c:/x
+	    System.out.println(two.resolve(two));     //c:/x/y/a/c:/x/y/a	    
+	   
 	}  
 }
