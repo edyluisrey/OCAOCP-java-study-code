@@ -75,7 +75,16 @@ public class TestPath {
 	    System.out.println(two.relativize(one));  // ../..
 	    System.out.println(one.resolve(two));     //c:/x/c:/x/y/a
 	    System.out.println(two.resolve(one));     //c:/x/y/a/c:/x
-	    System.out.println(two.resolve(two));     //c:/x/y/a/c:/x/y/a	    
+	    System.out.println(two.resolve(two));     //c:/x/y/a/c:/x/y/a	
+	    
+	    Path dir1 = Paths.get("source");
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir1, "*.txt")) {
+        	for (Path pathStr : stream) {
+        	System.out.println(pathStr); }
+        } catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	    }
 	   
 	}  
 }
