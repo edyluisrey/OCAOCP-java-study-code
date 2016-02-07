@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Airplane {
-    public static final Airplane Instance= new Airplane();
+    private static  Airplane Instance;
     private List<Integer> seats= new ArrayList<Integer>();
+    
     private Airplane(){
     	for(int i=1;i<=50;i++)
     		seats.add(i);
     }
     
     public static Airplane gerInstance(){
+    	if (Instance == null) {
+    		Instance= new Airplane();
+    	}
        return Instance;	
     }
      
