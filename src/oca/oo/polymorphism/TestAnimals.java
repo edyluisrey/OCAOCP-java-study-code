@@ -3,13 +3,13 @@ package oca.oo.polymorphism;
 //Overrides
 class Animal {
 	public void eat() {
-	  System.out.println("Generic Animal Eating Generically");
+	  System.out.println("Generic Animal Eat");
 	}
 }
 
 class Horse extends Animal {
 	public void eat() {
-	   System.out.println("Horse eating hay, oats, " + "and horse treats");
+	   System.out.println("Horse eat");
 	}
 	public void buck() { }
 }
