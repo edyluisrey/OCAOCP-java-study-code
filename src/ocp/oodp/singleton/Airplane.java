@@ -13,7 +13,7 @@ public class Airplane {
     }
     
     public static Airplane gerInstance(){
-    	if (Instance == null) {
+    	if (Instance == null) { 
     		Instance= new Airplane();
     	}
        return Instance;	
