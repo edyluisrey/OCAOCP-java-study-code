@@ -1,7 +1,7 @@
 package ocp.oodp.factory;
 
 interface Dish{
-  void prepare();	
+    void prepare();	
 }
 
 class Cebiche implements Dish{
@@ -30,7 +30,7 @@ class DishFactory {
 	      if(nameDish.equalsIgnoreCase("Cebiche")){
 	         return new Cebiche();
 	         
-	      } else if(nameDish.equalsIgnoreCase("LomoSaldado")){
+	      } else if(nameDish.equalsIgnoreCase("LomoSaltado")){
 	    	  return new LomoSaltado();
 	      }	      
 	      return null;
@@ -38,5 +38,12 @@ class DishFactory {
 }
 
 public class TestDishFactory {
-
+      
+	 public static void main(String[] args) {
+    	  DishFactory dishFactory= new DishFactory();
+    	  Dish dish1= dishFactory.getDish("Cebiche");
+    	  dish1.prepare();
+    	  Dish dish2=dishFactory.getDish("LomoSaltado");
+    	  dish2.prepare();
+	  }
 }
