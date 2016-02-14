@@ -14,7 +14,7 @@ class Cebiche implements Dish{
 	
 }
 
-class LomoSaldado implements Dish{
+class LomoSaltado implements Dish{
 
 	@Override
 	public void prepare() {
@@ -22,6 +22,19 @@ class LomoSaldado implements Dish{
 		System.out.println("prepare Lomo Saltado");
 	}
 	
+}
+
+class DishFactory {
+	
+	public Dish getDish(String nameDish){	     	
+	      if(nameDish.equalsIgnoreCase("Cebiche")){
+	         return new Cebiche();
+	         
+	      } else if(nameDish.equalsIgnoreCase("LomoSaldado")){
+	    	  return new LomoSaltado();
+	      }	      
+	      return null;
+	   }
 }
 
 public class TestDishFactory {
