@@ -1,5 +1,6 @@
 package ocp.collections;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 
 class  Vegetables{
@@ -25,5 +26,13 @@ public class TestVegetables {
 		list.removeFirst();
 		list.removeLast();
 		list.clear();  // empty all
+		
+		//HashSet:set has unique elements
+		HashSet<String> hash = new HashSet<>();
+		hash.add("cabbage");
+		hash.add("carrot");
+		hash.add("cabbage"); // Duplicate
+		hash.add("carrot"); // Duplicate
+		System.out.println(hash.size()); // 2
 	}
 }
