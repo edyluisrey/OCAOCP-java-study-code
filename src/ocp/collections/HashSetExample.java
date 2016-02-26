@@ -1,5 +1,6 @@
 package ocp.collections;
 
+import java.util.HashSet;
 
 class  Vegetables{
 	  int id;
@@ -34,5 +35,18 @@ class  Vegetables{
 }
 
 public class HashSetExample {
+     public static void main(String[] args) {
+    	 Vegetables artichoke = new Vegetables(1,"artichoke"); 
+    	 Vegetables asparagus = new Vegetables(2, "asparagus"); 
+    	 Vegetables beans = new Vegetables(3,"beans");
+    	 Vegetables beans2 = new Vegetables(4,"beans");
 
+    	 HashSet<Vegetables> list = new HashSet<>(); 
+    	 list.add(artichoke); 
+    	 list.add(asparagus); 
+    	 list.add(beans); 
+    	 list.add(beans2);
+    	 
+    	 System.out.println("size:"+list.size()); //3
+	 }
 }
