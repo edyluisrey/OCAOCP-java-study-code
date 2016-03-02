@@ -24,6 +24,10 @@ class FruitCitric{
 	public int hashCode() {
 		return this.id*10;
 	}
+	
+	public String toString() {
+        return ("id:"+this.id+ " Name:"+this.name+ " group:"+this.group);
+	}
  
 }
 
@@ -34,5 +38,6 @@ public class FruitHashEqual {
     	  System.out.println(orange.equals(tangerine));
     	  System.out.println(orange.hashCode());
     	  System.out.println(tangerine.hashCode());
+    	  System.out.println(orange);
 	  }
 }
