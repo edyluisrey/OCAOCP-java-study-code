@@ -2,6 +2,7 @@ package ocp.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 class FruitComparable implements Comparable<FruitComparable>{
 	int id;
@@ -26,6 +27,14 @@ class FruitComparable implements Comparable<FruitComparable>{
 	
 	
 }
+
+class OrderFruit implements Comparator<FruitComparable> {
+	@Override
+	public int compare(FruitComparable o1, FruitComparable o2) {
+		// TODO Auto-generated method stub
+		return o1.price-o2.price;
+	}
+}
 public class TestComparatorComparable {
       public static void main(String[] args) {
     	  FruitComparable fc1= new FruitComparable(2,"Mango",20);  
@@ -36,6 +45,10 @@ public class TestComparatorComparable {
     	  list.add(fc2);
     	  list.add(fc3);
     	  Collections.sort(list);
+    	  System.out.println(list);
+    	  
+    	  System.out.println("Comparator");
+    	  Collections.sort(list, new OrderFruit());
     	  System.out.println(list);
 	  }
 }
