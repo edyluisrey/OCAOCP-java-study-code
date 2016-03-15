@@ -35,6 +35,17 @@ class OrderFruit implements Comparator<FruitComparable> {
 		return o1.price-o2.price;
 	}
 }
+
+class NameSort implements Comparator<FruitComparable> {
+
+	@Override
+	public int compare(FruitComparable o1, FruitComparable o2) {
+		// TODO Auto-generated method stub
+		return o1.name.compareTo(o2.name);
+	}
+	
+}
+
 public class TestComparatorComparable {
       public static void main(String[] args) {
     	  FruitComparable fc1= new FruitComparable(2,"Mango",20);  
@@ -49,6 +60,10 @@ public class TestComparatorComparable {
     	  
     	  System.out.println("Comparator");
     	  Collections.sort(list, new OrderFruit());
+    	  System.out.println(list);
+    	  
+    	  System.out.println("Name sort");
+    	  Collections.sort(list,new NameSort());
     	  System.out.println(list);
 	  }
 }
