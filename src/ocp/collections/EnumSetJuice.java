@@ -9,6 +9,11 @@ public class EnumSetJuice {
 	};
     
 	public static void main(String[] args) {
-		 EnumSet<Fruit> Juice = EnumSet.of(Fruit.APPLE, Fruit.PAWPAW);
+		 EnumSet<Fruit> juice = EnumSet.of(Fruit.APPLE, Fruit.PAWPAW);
+		 drinkJuice(juice);
+	}
+	
+	public static void drinkJuice(EnumSet<Fruit> juice){
+       System.out.println("Juice of:"+juice);
 	}
 }
